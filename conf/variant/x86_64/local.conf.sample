@@ -26,7 +26,7 @@ SSTATE_DIR ?= "${TOPDIR}/../sstate-cache"
 DISTRO_FEATURES:remove = " wayland vulkan 3g"
 
 # Specify license white list
-LICENSE_FLAGS_WHITELIST = "commercial"
+LICENSE_FLAGS_ACCEPTED = "commercial"
 
 # Specify version for tracking
 CONF_VERSION = "2"
