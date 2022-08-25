@@ -1,0 +1,32 @@
+# Machine Selection
+MACHINE ?= "qemux86-64"
+
+# Default policy config
+DISTRO ?= "poky"
+
+# Package Management configuration
+PACKAGE_CLASSES ?= "package_ipk"
+
+# SDK target architecture
+SDKMACHINE ?= "x86_64"
+
+# Additional image features
+USER_CLASSES ?= "buildstats"
+
+# Interactive shell configuration
+PATCHRESOLVE = "noop"
+
+# Where to place downloads
+DL_DIR ?= "${TOPDIR}/../downloads"
+
+# Where to place shared-state files
+SSTATE_DIR ?= "${TOPDIR}/../sstate-cache"
+
+# Exclude some features (save time during build)
+DISTRO_FEATURES:remove = " wayland vulkan 3g"
+
+# Specify license white list
+LICENSE_FLAGS_WHITELIST = "commercial"
+
+# Specify version for tracking
+CONF_VERSION = "2"
