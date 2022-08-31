@@ -11,7 +11,6 @@ inherit core-image
 
 CORE_IMAGE_EXTRA_INSTALL:append = "\
     packagegroup-core-full-cmdline \
-    packagegroup-self-hosted \
     packagegroup-dev-tools \
 "
 
