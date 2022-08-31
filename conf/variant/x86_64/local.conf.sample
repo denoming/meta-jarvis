@@ -17,10 +17,10 @@ USER_CLASSES ?= "buildstats"
 PATCHRESOLVE = "noop"
 
 # Where to place downloads
-DL_DIR ?= "${TOPDIR}/../downloads"
+DL_DIR ?= "${TOPDIR}/../../cache/downloads"
 
 # Where to place shared-state files
-SSTATE_DIR ?= "${TOPDIR}/../sstate-cache"
+SSTATE_DIR ?= "${TOPDIR}/../../cache/sstate-cache"
 
 # Exclude some features (save time during build)
 DISTRO_FEATURES:remove = " wayland vulkan 3g"
