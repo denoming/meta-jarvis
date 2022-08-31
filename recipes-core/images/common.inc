@@ -1,7 +1,11 @@
-CORE_IMAGE_EXTRA_INSTALL:append = "\
-    packagegroup-custom-tools \
+IMAGE_FEATURES:append = "\
+    splash \
 "
 
 CORE_IMAGE_EXTRA_INSTALL:append = "\
-    boost \
+    packagegroup-system-tools \
+"
+
+CORE_IMAGE_EXTRA_INSTALL:append = "\
+    jarvis-executor \
 "

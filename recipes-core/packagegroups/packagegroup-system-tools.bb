@@ -1,4 +1,4 @@
-DESCRIPTION = "Custom tools for target device"
+DESCRIPTION = "System tools for target device"
 LICENSE = "MIT"
 PR = "r0"
 
