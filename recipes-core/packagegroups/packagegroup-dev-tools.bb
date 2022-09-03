@@ -4,7 +4,7 @@ PR = "r0"
 
 inherit packagegroup
 
-RDEPENDS:${PN} = "\
+RDEPENDS:packagegroup-dev-tools = "\
     cmake \
     ninja \
     dos2unix \

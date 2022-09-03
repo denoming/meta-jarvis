@@ -2,7 +2,7 @@ SUMMARY = "J.A.R.V.I.S console-only development image"
 LICENSE = "MIT"
 
 IMAGE_FEATURES:append = "\
-    ssh-server-openssh \
+    package-management \
     tools-debug \
     debug-tweaks \
 "
