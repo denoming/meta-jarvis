@@ -10,7 +10,6 @@ IMAGE_FEATURES:append = "\
 inherit core-image
 
 CORE_IMAGE_EXTRA_INSTALL:append = "\
-    packagegroup-core-full-cmdline \
     packagegroup-dev-tools \
 "
 

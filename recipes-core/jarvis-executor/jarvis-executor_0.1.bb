@@ -12,18 +12,14 @@ SRC_URI = "\
 S = "${WORKDIR}/git"
 
 DEPENDS += "\
-    openssl \
-    spdlog \
     boost \
-    googletest \
-"
-
-RDEPENDS_${PN} += "\
-    openssl \
     spdlog \
-    boost \
+    openssl \
 "
 
 inherit pkgconfig cmake
 
-EXTRA_OECMAKE:append = "-DFETCHCONTENT_FULLY_DISCONNECTED=OFF"
+EXTRA_OECMAKE = "\
+    -DFETCHCONTENT_FULLY_DISCONNECTED=OFF \
+    -DJARVIS_ENABLE_TESTS=OFF \
+"

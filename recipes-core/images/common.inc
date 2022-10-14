@@ -5,9 +5,13 @@ IMAGE_FEATURES:append = "\
 "
 
 CORE_IMAGE_EXTRA_INSTALL:append = "\
-    packagegroup-system-tools \
+    packagegroup-core-full-cmdline \
+    packagegroup-sys-tools \
+    packagegroup-gst \
+    packagegroup-audio \
 "
 
 CORE_IMAGE_EXTRA_INSTALL:append = "\
     jarvis-executor \
+    jarvis-speaker \
 "

@@ -1,11 +1,12 @@
-DESCRIPTION = "Development tools for target device"
+DESCRIPTION = "Development tools"
 LICENSE = "MIT"
 PR = "r0"
 
 inherit packagegroup
 
-RDEPENDS:packagegroup-dev-tools = "\
+RDEPENDS:${PN} = "\
     cmake \
     ninja \
     dos2unix \
+    ldd \
 "
