@@ -33,6 +33,7 @@ CONF_VERSION = "2"
 
 # Increase free disk space
 IMAGE_ROOTFS_EXTRA_SPACE = "524288"
+IMAGE_OVERHEAD_FACTOR = "1.5"
 
 # Use systemd for system initialization
 DISTRO_FEATURES:append = " systemd"
