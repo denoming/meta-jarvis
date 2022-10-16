@@ -1,4 +1,4 @@
-DESCRIPTION = "Gstreamer and gstreamer plugins collection"
+DESCRIPTION = "Gstreamer and gstreamer plugins collection package group"
 LICENSE = "MIT"
 PR = "r0"
 

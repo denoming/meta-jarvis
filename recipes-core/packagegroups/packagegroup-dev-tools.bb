@@ -1,4 +1,4 @@
-DESCRIPTION = "Development tools"
+DESCRIPTION = "Development tools package group"
 LICENSE = "MIT"
 PR = "r0"
 

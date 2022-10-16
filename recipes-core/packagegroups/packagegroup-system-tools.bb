@@ -1,4 +1,4 @@
-DESCRIPTION = "System tools for target device"
+DESCRIPTION = "System tools package group"
 LICENSE = "MIT"
 PR = "r0"
 

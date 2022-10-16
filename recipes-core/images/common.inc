@@ -1,4 +1,3 @@
-
 IMAGE_FEATURES:append = "\
     splash \
     ssh-server-openssh \
@@ -6,8 +5,8 @@ IMAGE_FEATURES:append = "\
 
 CORE_IMAGE_EXTRA_INSTALL:append = "\
     packagegroup-core-full-cmdline \
-    packagegroup-sys-tools \
-    packagegroup-gst \
+    packagegroup-system-tools \
+    packagegroup-gstreamer \
     packagegroup-audio \
 "
 
