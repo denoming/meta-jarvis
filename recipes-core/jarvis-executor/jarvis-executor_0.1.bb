@@ -1,10 +1,10 @@
-SUMMARY = "J.A.R.V.I.S executor project"
+SUMMARY = "J.A.R.V.I.S executor service project"
 SECTION = "examples"
 LICENSE = "CLOSED"
 
 PR = "r0"
 
-SRCREV = "38c54e4b7bdee5e5083bdc913e77c56139e237fc"
+SRCREV = "cc30a7fbefefc5c1421652eb1a2aeeacdeed3cd6"
 SRC_URI = "\
     git://git@github.com/karz0n/jarvis-executor.git;protocol=ssh;branch=master; \
 "
@@ -12,6 +12,7 @@ SRC_URI = "\
 S = "${WORKDIR}/git"
 
 DEPENDS += "\
+    jarvis-common \
     boost \
     spdlog \
     openssl \

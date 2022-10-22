@@ -11,6 +11,8 @@ CORE_IMAGE_EXTRA_INSTALL:append = "\
 "
 
 CORE_IMAGE_EXTRA_INSTALL:append = "\
+    dbus \
+    sdbus-c++-tools \
     jarvis-executor \
     jarvis-speaker \
 "
