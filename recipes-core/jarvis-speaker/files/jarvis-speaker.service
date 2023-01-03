@@ -1,0 +1,11 @@
+[Unit]
+Description=J.A.R.V.I.S speaker daemon
+
+[Service]
+Type=dbus
+BusName=org.denoming.jarvis.speaker
+Environment=GOOGLE_APPLICATION_CREDENTIALS=/usr/share/jarvis/jarvis-google-cloud.json
+ExecStart=/usr/bin/jarvis-speaker
+
+[Install]
+WantedBy=multi-user.target

@@ -4,9 +4,10 @@ LICENSE = "CLOSED"
 
 PR = "r0"
 
-SRCREV = "f8a5f13d5840783a1a4c17a65a8df9f47200a369"
+SRCREV = "616c4b414b5ea653b98f6eeff42f0dceeb404ad4"
 SRC_URI = "\
     git://git@github.com/karz0n/jarvis-speaker.git;protocol=ssh;branch=main; \
+    file://jarvis-speaker.service \
 "
 
 S = "${WORKDIR}/git"
@@ -26,8 +27,19 @@ DEPENDS += "\
     glibmm-2.68 \
 "
 
-inherit pkgconfig cmake
+inherit pkgconfig cmake systemd
 
 EXTRA_OECMAKE = "\
     -DJARVIS_ENABLE_TESTS=OFF \
 "
+
+SYSTEMD_SERVICE_${PN} = "jarvis-speaker.service"
+
+FILES:${PN} += "\
+    ${systemd_system_unitdir}/* \
+"
+
+do_install:append() {
+    install -d ${D}${systemd_system_unitdir}
+    install -m 0644 ${WORKDIR}/${BPN}.service ${D}${systemd_system_unitdir}
+}
