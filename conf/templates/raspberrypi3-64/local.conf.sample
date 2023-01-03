@@ -23,7 +23,7 @@ DL_DIR ?= "${TOPDIR}/../../cache/downloads"
 SSTATE_DIR ?= "${TOPDIR}/../../cache/sstate-cache"
 
 # Exclude some features (save time during build)
-DISTRO_FEATURES:remove = " x11 wayland vulkan 3g opengl"
+DISTRO_FEATURES:remove = " wayland vulkan 3g"
 
 # Specify license white list
 LICENSE_FLAGS_ACCEPTED = "commercial synaptics-killswitch"
