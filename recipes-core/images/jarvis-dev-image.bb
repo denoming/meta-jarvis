@@ -19,7 +19,11 @@ CORE_IMAGE_EXTRA_INSTALL:append = "\
     packagegroup-dev-packages \
 "
 
-TOOLCHAIN_HOST_TASK:append = " \
+TOOLCHAIN_HOST_TASK:append = "\
+    nativesdk-cmake \
+"
+
+TOOLCHAIN_HOST_TASK_ESDK:append = "\
     nativesdk-cmake \
 "
 
