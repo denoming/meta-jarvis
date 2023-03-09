@@ -4,7 +4,7 @@ LICENSE = "CLOSED"
 
 PR = "r0"
 
-SRCREV = "2e0b37f1323b78be585e41f630a9d9c2659080a7"
+SRCREV = "3c7c18d1a746b1792bfda63c723c2384534a532f"
 SRC_URI = "\
     git://git@github.com/karz0n/jarvis-common.git;protocol=ssh;branch=main; \
 "
@@ -12,6 +12,7 @@ SRC_URI = "\
 S = "${WORKDIR}/git"
 
 DEPENDS += "\
+    openssl \
     boost \
     spdlog \
 "

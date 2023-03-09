@@ -16,12 +16,6 @@ USER_CLASSES ?= "buildstats"
 # Interactive shell configuration
 PATCHRESOLVE = "noop"
 
-# Where to place downloads
-DL_DIR ?= "${TOPDIR}/../../cache/downloads"
-
-# Where to place shared-state files
-SSTATE_DIR ?= "${TOPDIR}/../../cache/sstate-cache"
-
 # Exclude some features (save time during build)
 DISTRO_FEATURES:remove = " wayland vulkan 3g"
 
@@ -45,3 +39,6 @@ VIRTUAL-RUNTIME_init_manager = "systemd"
 VIRTUAL-RUNTIME_initscripts = "systemd-compat-units"
 VIRTUAL-RUNTIME_login_manager = "shadow-base"
 VIRTUAL-RUNTIME_dev_manager = "systemd"
+
+SDK_EXT_TYPE = "full"
+SDK_UPDATE_URL = "http://localhost/jarvis/esdk-update"

@@ -3,7 +3,6 @@ LICENSE = "MIT"
 
 IMAGE_FEATURES:append = "\
     dev-pkgs \
-    doc-pkgs \
     dbg-pkgs \
     tools-debug \
     debug-tweaks \
@@ -14,6 +13,7 @@ inherit core-image
 
 CORE_IMAGE_EXTRA_INSTALL:append = "\
     packagegroup-self-hosted-sdk \
+    packagegroup-self-hosted-debug \
     packagegroup-self-hosted-extended \
     packagegroup-dev-tools \
     packagegroup-dev-packages \

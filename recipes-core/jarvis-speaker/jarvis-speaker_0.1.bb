@@ -4,7 +4,7 @@ LICENSE = "CLOSED"
 
 PR = "r0"
 
-SRCREV = "f056dfc0dce2cbe4db930e06ae822022299bcc86"
+SRCREV = "f39d5e60eaab6fbb7a82cca6a346ed3521673d8a"
 SRC_URI = "\
     git://git@github.com/karz0n/jarvis-speaker.git;protocol=ssh;branch=main; \
     file://jarvis-speaker.service \
@@ -15,7 +15,6 @@ S = "${WORKDIR}/git"
 DEPENDS += "\
     jarvis-common \
     boost \
-    spdlog \
     sdbus-c++ \
     sdbus-c++-tools-native \
     gstreamer1.0 \
