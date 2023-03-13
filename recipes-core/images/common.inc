@@ -11,9 +11,8 @@ CORE_IMAGE_EXTRA_INSTALL:append = "\
 "
 
 CORE_IMAGE_EXTRA_INSTALL:append = "\
+    dlt-daemon \
     dbus \
-    sdbus-c++ \
-    sdbus-c++-tools \
     jarvis-executor \
     jarvis-speaker \
     jarvis-weather \
