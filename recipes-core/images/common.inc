@@ -16,4 +16,5 @@ CORE_IMAGE_EXTRA_INSTALL:append = "\
     sdbus-c++-tools \
     jarvis-executor \
     jarvis-speaker \
+    jarvis-weather \
 "
