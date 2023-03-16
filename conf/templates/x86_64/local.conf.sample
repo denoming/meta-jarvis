@@ -1,5 +1,6 @@
 # Machine Selection
 MACHINE ?= "qemux86-64"
+MACHINE_ESSENTIAL_EXTRA_RRECOMMENDS += "kernel-modules"
 
 # Default policy config
 DISTRO ?= "poky"
