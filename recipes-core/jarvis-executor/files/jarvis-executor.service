@@ -1,0 +1,10 @@
+[Unit]
+Description=J.A.R.V.I.S executor service
+
+[Service]
+Type=simple
+ExecStart=/usr/bin/jarvis-executor
+Environment=JARVIS_EXECUTOR_CONFIG=/usr/share/jarvis/jarvis-executor-config.json
+
+[Install]
+WantedBy=multi-user.target

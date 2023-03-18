@@ -1,10 +1,10 @@
-SUMMARY = "J.A.R.V.I.S weather service project"
+SUMMARY = "J.A.R.V.I.S weather service"
 SECTION = "examples"
 LICENSE = "CLOSED"
 
 PR = "r0"
 
-SRCREV = "a4c29302f4ea4a54a61e8ee13df80ddb7bf415c3"
+SRCREV = "9c8adee2c054acc3cd58fcdf9b092c92e3a848de"
 SRC_URI = "\
     git://git@github.com/karz0n/jarvis-weather.git;protocol=ssh;branch=main; \
     file://jarvis-weather.service \

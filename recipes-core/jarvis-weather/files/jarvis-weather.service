@@ -1,5 +1,5 @@
 [Unit]
-Description=J.A.R.V.I.S weather daemon
+Description=J.A.R.V.I.S weather service
 
 [Service]
 Type=dbus

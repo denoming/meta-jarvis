@@ -1,10 +1,10 @@
-SUMMARY = "J.A.R.V.I.S speaker service project"
+SUMMARY = "J.A.R.V.I.S speaker service"
 SECTION = "examples"
 LICENSE = "CLOSED"
 
 PR = "r0"
 
-SRCREV = "f39d5e60eaab6fbb7a82cca6a346ed3521673d8a"
+SRCREV = "741e6c0fb3e879a2965a283f088ec2d50e55bdc4"
 SRC_URI = "\
     git://git@github.com/karz0n/jarvis-speaker.git;protocol=ssh;branch=main; \
     file://jarvis-speaker.service \
