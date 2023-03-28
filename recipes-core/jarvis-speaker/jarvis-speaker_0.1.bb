@@ -4,7 +4,7 @@ LICENSE = "CLOSED"
 
 PR = "r0"
 
-SRCREV = "741e6c0fb3e879a2965a283f088ec2d50e55bdc4"
+SRCREV = "9210c5651f0936cf2117ef9f2dc28c3e0e03c379"
 SRC_URI = "\
     git://git@github.com/karz0n/jarvis-speaker.git;protocol=ssh;branch=main; \
     file://jarvis-speaker.service \
@@ -15,15 +15,16 @@ S = "${WORKDIR}/git"
 DEPENDS += "\
     jarvis-common \
     boost \
-    sdbus-c++ \
-    sdbus-c++-tools-native \
+    openssl \
+    spdlog \
+    glibmm-2.68 \
     gstreamer1.0 \
     gstreamer1.0-plugins-base \
     gstreamer1.0-plugins-good \
     gstreamer1.0-plugins-bad \
-    google-cloud-cpp \
+    sdbus-c++ \
     libsigc++-3 \
-    glibmm-2.68 \
+    google-cloud-cpp \
 "
 
 inherit pkgconfig cmake systemd

@@ -5,7 +5,7 @@ Description=J.A.R.V.I.S speaker service
 Type=dbus
 BusName=org.denoming.jarvis.speaker
 ExecStart=/usr/bin/jarvis-speaker
-Environment=GOOGLE_APPLICATION_CREDENTIALS=/usr/share/jarvis/jarvis-google-cloud.json
+Environment=GOOGLE_APPLICATION_CREDENTIALS=/usr/share/jarvis/jarvis-cloud-access.json
 
 [Install]
 WantedBy=multi-user.target

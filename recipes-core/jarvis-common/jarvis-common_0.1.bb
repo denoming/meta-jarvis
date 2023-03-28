@@ -4,7 +4,7 @@ LICENSE = "CLOSED"
 
 PR = "r0"
 
-SRCREV = "e2d3685b9ff8a59a313780d9599ccfbe7283ce20"
+SRCREV = "ed62b484187cd2c5e8b550bcbf7c98be1bd27d4f"
 SRC_URI = "\
     git://git@github.com/karz0n/jarvis-common.git;protocol=ssh;branch=main; \
 "
@@ -12,13 +12,15 @@ SRC_URI = "\
 S = "${WORKDIR}/git"
 
 DEPENDS += "\
-    openssl \
     boost \
+    openssl \
     spdlog \
+    dlt-daemon \
 "
 
 inherit pkgconfig cmake
 
 EXTRA_OECMAKE = "\
+    -DJARVIS_ENABLE_DLT=ON \
     -DJARVIS_ENABLE_TESTS=OFF \
 "
