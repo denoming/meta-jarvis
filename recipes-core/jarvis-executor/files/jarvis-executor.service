@@ -1,5 +1,7 @@
 [Unit]
 Description=J.A.R.V.I.S executor service
+Wants=jarvis-speaker.service jarvis-weather.service
+After=jarvis-speaker.service jarvis-weather.service
 
 [Service]
 Type=simple
