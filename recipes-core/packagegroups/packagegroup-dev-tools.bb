@@ -7,6 +7,4 @@ inherit packagegroup
 RDEPENDS:${PN} = "\
     cmake \
     ninja \
-    dos2unix \
-    ldd \
 "

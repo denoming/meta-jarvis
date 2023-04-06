@@ -3,10 +3,7 @@ MACHINE ?= "raspberrypi3-64"
 MACHINE_ESSENTIAL_EXTRA_RRECOMMENDS += "kernel-modules"
 
 # Default policy config
-DISTRO ?= "poky"
-
-# Package Management configuration
-PACKAGE_CLASSES ?= "package_ipk"
+DISTRO ?= "jarvis"
 
 # SDK target architecture
 SDKMACHINE ?= "x86_64"
@@ -16,9 +13,6 @@ USER_CLASSES ?= "buildstats"
 
 # Interactive shell configuration
 PATCHRESOLVE = "noop"
-
-# Exclude some features (save time during build)
-DISTRO_FEATURES:remove = " wayland vulkan 3g"
 
 # Specify license white list
 LICENSE_FLAGS_ACCEPTED = "commercial synaptics-killswitch"
@@ -33,13 +27,8 @@ IMAGE_FSTYPES = "tar.bz2 ext4 rpi-sdimg"
 IMAGE_ROOTFS_EXTRA_SPACE = "524288"
 IMAGE_OVERHEAD_FACTOR = "1.5"
 
-# Use systemd for system initialization
-DISTRO_FEATURES:append = " systemd"
-DISTRO_FEATURES_BACKFILL_CONSIDERED:append = " sysvinit"
-VIRTUAL-RUNTIME_init_manager = "systemd"
-VIRTUAL-RUNTIME_initscripts = "systemd-compat-units"
-VIRTUAL-RUNTIME_login_manager = "shadow-base"
-VIRTUAL-RUNTIME_dev_manager = "systemd"
-
 SDK_EXT_TYPE = "full"
 SDK_UPDATE_URL = "http://localhost/jarvis/esdk-update"
+
+# Specify path to archive with J.A.R.V.I.S config files
+JAR_CONFIG_FILE = "/absolute-path/config-files-archive.tar.gz"

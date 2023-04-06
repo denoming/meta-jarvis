@@ -1,20 +1,22 @@
-SUMMARY = "J.A.R.V.I.S development image"
+SUMMARY = "J.A.R.V.I.S console-only development image"
 LICENSE = "MIT"
+
+require jarvis-image.bb
 
 IMAGE_FEATURES:append = "\
     dev-pkgs \
     dbg-pkgs \
     tools-debug \
+    tools-testapps \
     debug-tweaks \
     package-management \
 "
 
-inherit core-image
-
 CORE_IMAGE_EXTRA_INSTALL:append = "\
-    packagegroup-self-hosted-sdk \
-    packagegroup-self-hosted-debug \
-    packagegroup-self-hosted-extended \
+    packagegroup-core-buildessential \
+    packagegroup-core-sdk \
+    packagegroup-core-tools-debug \
+    packagegroup-core-tools-profile \
     packagegroup-dev-tools \
     packagegroup-dev-packages \
 "
@@ -26,5 +28,3 @@ TOOLCHAIN_HOST_TASK:append = "\
 TOOLCHAIN_HOST_TASK_ESDK:append = "\
     nativesdk-cmake \
 "
-
-require common.inc
