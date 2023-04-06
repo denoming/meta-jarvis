@@ -5,6 +5,7 @@ LICENSE = "CLOSED"
 PR = "r0"
 
 SRCREV = "714e09d6f5c34c12687fc90634612e21ab533169"
+
 SRC_URI = "\
     git://git@github.com/karz0n/jarvis-weather.git;protocol=ssh;branch=main; \
     file://jarvis-weather.service \
@@ -20,17 +21,17 @@ DEPENDS += "\
     sdbus-c++ \
 "
 
+RDEPENDS:${PN} += "\
+    jarvis-config \
+"
+
 inherit pkgconfig cmake systemd
 
 EXTRA_OECMAKE = "\
     -DJARVIS_ENABLE_TESTS=OFF \
 "
 
-SYSTEMD_SERVICE_${PN} = "jarvis-weather.service"
-
-FILES:${PN} += "\
-    ${systemd_system_unitdir}/* \
-"
+SYSTEMD_SERVICE:${PN} = "jarvis-weather.service"
 
 do_install:append() {
     install -d ${D}${systemd_system_unitdir}

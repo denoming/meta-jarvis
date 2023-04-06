@@ -5,6 +5,7 @@ LICENSE = "CLOSED"
 PR = "r0"
 
 SRCREV = "a28c70494beccac536fe16c967bfc757c91b828a"
+
 SRC_URI = "\
     git://git@github.com/karz0n/jarvis-executor.git;protocol=ssh;branch=master; \
     file://jarvis-executor.service \
@@ -22,17 +23,17 @@ DEPENDS += "\
     spdlog \
 "
 
+RDEPENDS:${PN} += "\
+    jarvis-config \
+"
+
 inherit pkgconfig cmake systemd
 
 EXTRA_OECMAKE = "\
     -DJARVIS_ENABLE_TESTS=OFF \
 "
 
-SYSTEMD_SERVICE_${PN} = "jarvis-executor.service"
-
-FILES:${PN} += "\
-    ${systemd_system_unitdir}/* \
-"
+SYSTEMD_SERVICE:${PN} = "jarvis-executor.service"
 
 do_install:append() {
     install -d ${D}${systemd_system_unitdir}

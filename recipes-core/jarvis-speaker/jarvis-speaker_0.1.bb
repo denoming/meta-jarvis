@@ -5,6 +5,7 @@ LICENSE = "CLOSED"
 PR = "r0"
 
 SRCREV = "9210c5651f0936cf2117ef9f2dc28c3e0e03c379"
+
 SRC_URI = "\
     git://git@github.com/karz0n/jarvis-speaker.git;protocol=ssh;branch=main; \
     file://jarvis-speaker.service \
@@ -27,17 +28,17 @@ DEPENDS += "\
     google-cloud-cpp \
 "
 
+RDEPENDS:${PN} += "\
+    jarvis-config \
+"
+
 inherit pkgconfig cmake systemd
 
 EXTRA_OECMAKE = "\
     -DJARVIS_ENABLE_TESTS=OFF \
 "
 
-SYSTEMD_SERVICE_${PN} = "jarvis-speaker.service"
-
-FILES:${PN} += "\
-    ${systemd_system_unitdir}/* \
-"
+SYSTEMD_SERVICE:${PN} = "jarvis-speaker.service"
 
 do_install:append() {
     install -d ${D}${systemd_system_unitdir}
