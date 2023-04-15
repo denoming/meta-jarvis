@@ -4,7 +4,7 @@ LICENSE = "CLOSED"
 
 PR = "r0"
 
-SRCREV = "ed62b484187cd2c5e8b550bcbf7c98be1bd27d4f"
+SRCREV = "51f3489f24ca70fdce1581505f2c5d2aaf90dde8"
 SRC_URI = "\
     git://git@github.com/karz0n/jarvis-common.git;protocol=ssh;branch=main; \
 "
