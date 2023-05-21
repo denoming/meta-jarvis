@@ -16,7 +16,9 @@ CORE_IMAGE_EXTRA_INSTALL:append = "\
 
 CORE_IMAGE_EXTRA_INSTALL:append = "\
     dbus \
+    tzdata \
+    tzdata-europe \
     jarvis-executor \
-    jarvis-speaker \
     jarvis-weather \
+    jarvis-speaker \
 "

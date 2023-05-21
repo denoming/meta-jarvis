@@ -4,7 +4,7 @@ LICENSE = "CLOSED"
 
 PR = "r0"
 
-SRCREV = "413a952825ac3b9c7385f6f8c2fc4a1a3a892709"
+SRCREV = "7b2802d4bb33d4000cb6ee7c06d39636f7930cc8"
 
 SRC_URI = "\
     git://git@github.com/karz0n/jarvis-speaker.git;protocol=ssh;branch=main; \
