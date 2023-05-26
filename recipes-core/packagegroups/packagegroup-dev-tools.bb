@@ -5,6 +5,7 @@ PR = "r0"
 inherit packagegroup
 
 RDEPENDS:${PN} = "\
+    git \
     cmake \
     ninja \
 "

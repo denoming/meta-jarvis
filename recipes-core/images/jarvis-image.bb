@@ -10,14 +10,15 @@ IMAGE_FEATURES:append = "\
 
 CORE_IMAGE_EXTRA_INSTALL:append = "\
     packagegroup-core-full-cmdline \
-    packagegroup-system-tools \
-    packagegroup-gstreamer \
+    packagegroup-jarvis-core \
+    packagegroup-jarvis-video \
 "
 
 CORE_IMAGE_EXTRA_INSTALL:append = "\
     dbus \
-    tzdata \
-    tzdata-europe \
+"
+
+CORE_IMAGE_EXTRA_INSTALL:append = "\
     jarvis-executor \
     jarvis-weather \
     jarvis-speaker \
