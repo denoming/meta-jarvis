@@ -14,7 +14,6 @@ SRC_URI = "\
 S = "${WORKDIR}/git"
 
 DEPENDS += "\
-    jarvis-common \
     boost \
     openssl \
     spdlog \
@@ -26,6 +25,7 @@ DEPENDS += "\
     sdbus-c++ \
     libsigc++-3 \
     google-cloud-cpp \
+    jarvis-common \
 "
 
 RDEPENDS:${PN} += "\

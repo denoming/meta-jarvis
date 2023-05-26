@@ -4,7 +4,7 @@ LICENSE = "CLOSED"
 
 PR = "r0"
 
-SRCREV = "a0efeb796ade568331882a0ba8c5d91e58a9a19c"
+SRCREV = "dbdbadac59731d0266e2308c5495296c1b397e01"
 
 SRC_URI = "\
     git://git@github.com/karz0n/jarvis-executor.git;protocol=ssh;branch=master; \
@@ -14,13 +14,13 @@ SRC_URI = "\
 S = "${WORKDIR}/git"
 
 DEPENDS += "\
-    jarvis-common \
-    jarvis-speaker \
-    jarvis-weather \
     boost \
     spdlog \
     openssl \
     spdlog \
+    jarvis-common \
+    jarvis-speaker \
+    jarvis-weather \
 "
 
 RDEPENDS:${PN} += "\

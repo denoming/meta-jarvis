@@ -4,7 +4,7 @@ LICENSE = "CLOSED"
 
 PR = "r0"
 
-SRCREV = "f2c75de52f75014cb80e79abd1539afc7deeb252"
+SRCREV = "427c4c32bafa130da4ce61b488c0a99326868fa8"
 
 SRC_URI = "\
     git://git@github.com/karz0n/jarvis-weather.git;protocol=ssh;branch=main; \
@@ -14,9 +14,9 @@ SRC_URI = "\
 S = "${WORKDIR}/git"
 
 DEPENDS += "\
-    jarvis-common \
     boost \
     sdbus-c++ \
+    jarvis-common \
 "
 
 RDEPENDS:${PN} += "\
