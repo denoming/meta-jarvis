@@ -11,13 +11,13 @@ SRC_URI = "\
 S = "${WORKDIR}"
 
 FILES:${PN} += "\
-    ${datadir}/* \
+    ${datadir} \
+    ${sysconfdir} \
+    ${localstatedir} \
 "
 
 do_install() {
-    # Create config dir
-    install -d ${D}${datadir}/jarvis
     # Copy all config files into config dir
-    cp ${S}${datadir}/jarvis/*.* ${D}${datadir}/jarvis
+    cp -R ${S}/files/* ${D}
 }
 

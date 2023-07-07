@@ -8,14 +8,12 @@ PACKAGES = "\
     packagegroup-jarvis-core \
     packagegroup-jarvis-core-disk \
     packagegroup-jarvis-core-network \
-    packagegroup-jarvis-core-virtualization \
     packagegroup-jarvis-core-misc \
 "
 
 RDEPENDS:packagegroup-jarvis-core = "\
     packagegroup-jarvis-core-disk \
     packagegroup-jarvis-core-network \
-    packagegroup-jarvis-core-virtualization \
     packagegroup-jarvis-core-misc \
 "
 
@@ -34,14 +32,7 @@ RDEPENDS:packagegroup-jarvis-core-network = "\
     mosquitto \
 "
 
-RDEPENDS:packagegroup-jarvis-core-virtualization = "\
-    docker-ce \
-    docker-compose \
-"
-
 RDEPENDS:packagegroup-jarvis-core-misc = "\
     tzdata \
     tzdata-europe \
-    nodejs \
-    nodejs-npm \
 "

@@ -19,7 +19,6 @@ CORE_IMAGE_EXTRA_INSTALL:append = "\
 "
 
 CORE_IMAGE_EXTRA_INSTALL:append = "\
-    jarvis-executor \
-    jarvis-weather \
-    jarvis-speaker \
+    jarvisto \
+    speechee \
 "

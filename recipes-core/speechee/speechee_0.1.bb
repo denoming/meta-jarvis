@@ -1,14 +1,14 @@
-SUMMARY = "J.A.R.V.I.S speaker service"
+SUMMARY = "SpeeChee service"
 SECTION = "examples"
 LICENSE = "CLOSED"
 
 PR = "r0"
 
-SRCREV = "7b2802d4bb33d4000cb6ee7c06d39636f7930cc8"
+SRCREV = "06c647fa40cb2b8b945630feb2dbf16c8c4ee3ce"
 
 SRC_URI = "\
-    git://git@github.com/karz0n/jarvis-speaker.git;protocol=ssh;branch=main; \
-    file://jarvis-speaker.service \
+    git://git@github.com/karz0n/speechee.git;protocol=ssh;branch=main; \
+    file://speechee.service \
 "
 
 S = "${WORKDIR}/git"
@@ -21,11 +21,11 @@ DEPENDS += "\
     gstreamer1.0 \
     gstreamer1.0-plugins-base \
     gstreamer1.0-plugins-good \
-    gstreamer1.0-plugins-bad \
+    gstreamer1.0-plugins-bad \    
     sdbus-c++ \
     libsigc++-3 \
     google-cloud-cpp \
-    jarvis-common \
+    jarvisto \
 "
 
 RDEPENDS:${PN} += "\
@@ -35,10 +35,12 @@ RDEPENDS:${PN} += "\
 inherit pkgconfig cmake systemd
 
 EXTRA_OECMAKE = "\
-    -DJARVIS_ENABLE_TESTS=OFF \
+    -DENABLE_TESTS=OFF \
+    -DENABLE_DLT=ON \
+    -DENABLE_CLI=ON \
 "
 
-SYSTEMD_SERVICE:${PN} = "jarvis-speaker.service"
+SYSTEMD_SERVICE:${PN} = "speechee.service"
 
 do_install:append() {
     install -d ${D}${systemd_system_unitdir}
