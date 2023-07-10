@@ -5,7 +5,7 @@ Description=Speechee service
 Type=dbus
 BusName=org.denoming.speechee
 ExecStart=/usr/bin/speechee
-Environment=GOOGLE_APPLICATION_CREDENTIALS=/usr/share/jarvis/jarvis-cloud-access.json
+Environment=GOOGLE_APPLICATION_CREDENTIALS=/usr/share/speechee/speechee-cloud-access.json
 
 [Install]
 WantedBy=multi-user.target
