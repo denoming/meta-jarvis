@@ -4,7 +4,7 @@ LICENSE = "CLOSED"
 
 PR = "r0"
 
-SRCREV = "06c647fa40cb2b8b945630feb2dbf16c8c4ee3ce"
+SRCREV = "ba45c757f2df36a7ea64fd61fc0dc6009ec8313e"
 
 SRC_URI = "\
     git://git@github.com/karz0n/speechee.git;protocol=ssh;branch=main; \
@@ -15,17 +15,19 @@ S = "${WORKDIR}/git"
 
 DEPENDS += "\
     boost \
-    openssl \
-    spdlog \
     glibmm-2.68 \
+    google-cloud-cpp \
     gstreamer1.0 \
+    gstreamer1.0-plugins-bad \    
     gstreamer1.0-plugins-base \
     gstreamer1.0-plugins-good \
-    gstreamer1.0-plugins-bad \    
-    sdbus-c++ \
-    libsigc++-3 \
-    google-cloud-cpp \
     jarvisto \
+    libconfig \
+    libsigc++-3 \
+    mosquitto \
+    openssl \
+    sdbus-c++ \
+    spdlog \
 "
 
 RDEPENDS:${PN} += "\
