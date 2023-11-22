@@ -1,0 +1,10 @@
+[Unit]
+Description=Rintento service
+
+[Service]
+Type=simple
+ExecStart=/usr/bin/rintento
+Environment=RINTENTO_CONFIG=/usr/share/rintento/rintento.cfg
+
+[Install]
+WantedBy=multi-user.target

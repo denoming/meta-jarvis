@@ -4,7 +4,7 @@ LICENSE = "CLOSED"
 
 PR = "r0"
 
-SRCREV = "ba45c757f2df36a7ea64fd61fc0dc6009ec8313e"
+SRCREV = "c3a78517f7ae08a881cf551a36f2ba15ac175df3"
 
 SRC_URI = "\
     git://git@github.com/karz0n/speechee.git;protocol=ssh;branch=main; \
@@ -24,7 +24,6 @@ DEPENDS += "\
     jarvisto \
     libconfig \
     libsigc++-3 \
-    mosquitto \
     openssl \
     sdbus-c++ \
     spdlog \
@@ -40,6 +39,9 @@ EXTRA_OECMAKE = "\
     -DENABLE_TESTS=OFF \
     -DENABLE_DLT=ON \
     -DENABLE_CLI=ON \
+    -DENABLE_DBUS_SUPPORT=ON \
+    -DENABLE_HTTP_SUPPORT=ON \
+    -DENABLE_INTEGRATION=ON \
 "
 
 SYSTEMD_SERVICE:${PN} = "speechee.service"

@@ -5,6 +5,7 @@ Description=Speechee service
 Type=dbus
 BusName=org.denoming.speechee
 ExecStart=/usr/bin/speechee
+Environment=SPEECHEE_CONFIG=/usr/share/speechee/speechee.cfg
 Environment=GOOGLE_APPLICATION_CREDENTIALS=/usr/share/speechee/speechee-cloud-access.json
 
 [Install]
