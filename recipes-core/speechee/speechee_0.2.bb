@@ -4,7 +4,7 @@ LICENSE = "CLOSED"
 
 PR = "r0"
 
-SRCREV = "c3a78517f7ae08a881cf551a36f2ba15ac175df3"
+SRCREV = "b99e14ce4804198c2144135c0f6d17076355f66a"
 
 SRC_URI = "\
     git://git@github.com/karz0n/speechee.git;protocol=ssh;branch=main; \
