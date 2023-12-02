@@ -5,10 +5,10 @@ LICENSE = "CLOSED"
 PR = "r0"
 
 SRC_URI = "\
-    file://${JAR_CONFIG_FILE} \
+    file://${JAR_CONFIG_FILE};subdir=files \
 "
 
-S = "${WORKDIR}"
+S = "${WORKDIR}/files"
 
 FILES:${PN} += "\
     ${datadir} \
@@ -18,6 +18,6 @@ FILES:${PN} += "\
 
 do_install() {
     # Copy all config files into config dir
-    cp -R ${S}/files/* ${D}
+    cp -R ${S}/* ${D}
 }
 
