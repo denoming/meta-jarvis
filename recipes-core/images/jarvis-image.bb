@@ -1,12 +1,13 @@
 SUMMARY = "J.A.R.V.I.S console-only production image"
 LICENSE = "MIT"
 
-require recipes-core/images/core-image-base.bb
+require recipes-core/images/core-image-minimal.bb
 
 IMAGE_FEATURES:append = "\
-    hwcodecs \
+    splash \
     ssh-server-dropbear \
     read-only-rootfs \
+    hwcodecs \
     package-management \
 "
 
