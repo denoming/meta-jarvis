@@ -6,6 +6,7 @@ require recipes-core/images/core-image-base.bb
 IMAGE_FEATURES:append = "\
     hwcodecs \
     ssh-server-dropbear \
+    read-only-rootfs \
     package-management \
 "
 
