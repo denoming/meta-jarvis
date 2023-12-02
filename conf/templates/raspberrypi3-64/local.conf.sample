@@ -17,16 +17,16 @@ PATCHRESOLVE = "noop"
 # Specify license white list
 LICENSE_FLAGS_ACCEPTED = "commercial synaptics-killswitch"
 
-# Specify version for tracking
+# Set version for tracking
 CONF_VERSION = "2"
 
 # Specify image filesystem types
 IMAGE_FSTYPES = "tar.bz2 ext4 rpi-sdimg"
 
-# Increase free disk space
+# Set extra free disk space
 IMAGE_ROOTFS_EXTRA_SPACE = "524288"
-IMAGE_OVERHEAD_FACTOR = "1.5"
 
+# Set SDK options
 SDK_EXT_TYPE = "full"
 SDK_UPDATE_URL = "http://localhost/jarvis/esdk-update"
 
