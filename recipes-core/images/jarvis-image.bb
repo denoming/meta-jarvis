@@ -6,6 +6,7 @@ require recipes-core/images/core-image-base.bb
 IMAGE_FEATURES:append = "\
     hwcodecs \
     ssh-server-openssh \
+    package-management \
 "
 
 CORE_IMAGE_EXTRA_INSTALL:append = "\

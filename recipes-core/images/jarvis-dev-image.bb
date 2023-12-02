@@ -9,5 +9,4 @@ IMAGE_FEATURES:append = "\
     tools-debug \
     tools-testapps \
     debug-tweaks \
-    package-management \
 "
