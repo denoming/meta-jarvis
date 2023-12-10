@@ -1,7 +1,9 @@
 SUMMARY = "Rintento service"
 SECTION = "examples"
-LICENSE = "CLOSED"
+LICENSE = "MIT"
+LIC_FILES_CHKSUM ?= "file://LICENSE.md;md5=6898cb3ee19e03c282cebbcefe2b3e42"
 
+PV = "0.3-git${SRCPV}"
 PR = "r0"
 
 SRCREV = "afb99c84a83cf4d835c0d55a9fd5a4715be6ac55"
