@@ -7,14 +7,14 @@ inherit packagegroup
 PACKAGES = "\
     packagegroup-jarvis \
     packagegroup-jarvis-multimedia \
-    packagegroup-jarvis-storage \
+    packagegroup-jarvis-utils \
     packagegroup-jarvis-network \
     packagegroup-jarvis-misc \
 "
 
 RDEPENDS:packagegroup-jarvis = "\
     packagegroup-jarvis-multimedia \
-    packagegroup-jarvis-storage \
+    packagegroup-jarvis-utils \
     packagegroup-jarvis-network \
     packagegroup-jarvis-misc \
 "
@@ -28,11 +28,10 @@ RDEPENDS:packagegroup-jarvis-multimedia = "\
     gstreamer1.0-plugins-bad \
 "
 
-RDEPENDS:packagegroup-jarvis-storage = "\
-    blktool \
-    e2fsprogs \
+RDEPENDS:packagegroup-jarvis-utils = "\
+    pciutils \
+    usbutils \
     e2fsprogs-e2fsck \
-    e2fsprogs-mke2fs \
     e2fsprogs-tune2fs \
     e2fsprogs-badblocks \
     e2fsprogs-resize2fs \
