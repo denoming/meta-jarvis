@@ -38,8 +38,6 @@ RDEPENDS:packagegroup-jarvis-utils = "\
 "
 
 RDEPENDS:packagegroup-jarvis-network = "\
-    connman \
-    connman-client \
     mosquitto \
 "
 
