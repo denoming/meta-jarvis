@@ -4,10 +4,10 @@ LICENSE = "CLOSED"
 
 PR = "r0"
 
-SRCREV = "b99e14ce4804198c2144135c0f6d17076355f66a"
+SRCREV = "cf9eb11ca3da3376088af9120cdb41002c30bcf5"
 
 SRC_URI = "\
-    git://git@github.com/karz0n/speechee.git;protocol=ssh;branch=main; \
+    git://git@github.com/denoming/speechee.git;protocol=ssh;branch=main; \
     file://speechee.service \
 "
 
