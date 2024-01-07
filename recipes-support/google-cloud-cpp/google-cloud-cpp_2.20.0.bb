@@ -9,6 +9,8 @@ DEPENDS = "\
     nlohmann-json \
     protobuf \
     protobuf-native \
+    protobuf-c \
+    protobuf-c-native \
     grpc \
     grpc-native \
 "
@@ -16,8 +18,8 @@ DEPENDS = "\
 PR = "r0"
 
 S = "${WORKDIR}/git"
-SRCREV = "dfa5857a01191e064d3ffc831b330cf1aa5c0441"
-BRANCH = "v2.2.x"
+SRCREV = "d752a02f7a0647f62d0ecc3b8f947637f68ca9ee"
+BRANCH = "v2.20.x"
 SRC_URI = "\
     git://github.com/googleapis/google-cloud-cpp.git;protocol=https;branch=${BRANCH} \
 "
@@ -25,10 +27,13 @@ SRC_URI = "\
 inherit cmake
 
 EXTRA_OECMAKE += "\
-    -DCMAKE_CXX_STANDARD=14 \
+    -DCMAKE_CXX_STANDARD=17 \
+    -DCMAKE_CROSSCOMPILING=ON \
     -DBUILD_TESTING=OFF \
+    -DProtobuf_PROTOC_EXECUTABLE=${STAGING_BINDIR_NATIVE}/protoc \
     -DGOOGLE_CLOUD_CPP_ENABLE=texttospeech \
     -DGOOGLE_CLOUD_CPP_ENABLE_EXAMPLES=OFF \
+    -DGOOGLE_CLOUD_CPP_GRPC_PLUGIN_EXECUTABLE=${STAGING_BINDIR_NATIVE}/grpc_cpp_plugin \
 "
 
 PACKAGECONFIG ??= "shared"
