@@ -27,6 +27,7 @@ RDEPENDS:packagegroup-jarvis-multimedia = "\
     gstreamer1.0-plugins-base \
     gstreamer1.0-plugins-good \
     gstreamer1.0-plugins-bad \
+    ${@bb.utils.contains('MACHINE', 'raspberrypi3', 'gstreamer1.0-omx', '', d)} \
 "
 
 RDEPENDS:packagegroup-jarvis-utils = "\
