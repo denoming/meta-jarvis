@@ -1,0 +1,39 @@
+# Machine Selection
+MACHINE ?= "raspberrypi3"
+MACHINE_ESSENTIAL_EXTRA_RRECOMMENDS += "kernel-modules"
+
+# Default policy config
+DISTRO ?= "jarvis"
+
+# SDK target architecture
+SDKMACHINE ?= "x86_64"
+
+# Additional image features
+USER_CLASSES ?= "buildstats"
+
+# Interactive shell configuration
+PATCHRESOLVE = "noop"
+
+# Specify license white list
+LICENSE_FLAGS_ACCEPTED = "commercial synaptics-killswitch"
+
+# Set version for tracking
+CONF_VERSION = "2"
+
+# Specify image filesystem types
+IMAGE_FSTYPES = "tar.bz2 ext4.xz rpi-sdimg"
+SDIMG_ROOTFS_TYPE = "ext4.xz"
+
+# Extra configuration
+DISABLE_OVERSCAN = "1"
+DISABLE_SPLASH = "1"
+
+# Set extra free disk space
+IMAGE_ROOTFS_EXTRA_SPACE = "524288"
+
+# Set SDK options
+SDK_EXT_TYPE = "full"
+SDK_UPDATE_URL = "http://localhost/jarvis/esdk-update"
+
+# Specify path to archive with J.A.R.V.I.S config files
+JAR_CONFIG_FILE = "/absolute-path/config-files-archive.tar.gz"
