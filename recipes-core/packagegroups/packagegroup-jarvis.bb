@@ -1,6 +1,7 @@
 DESCRIPTION = "The J.A.R.V.I.S core package group"
 LICENSE = "MIT"
 PR = "r0"
+PACKAGE_ARCH = "${MACHINE_ARCH}"
 
 inherit packagegroup
 
@@ -38,6 +39,7 @@ RDEPENDS:packagegroup-jarvis-utils = "\
 "
 
 RDEPENDS:packagegroup-jarvis-network = "\
+    dbus \
     mosquitto \
 "
 

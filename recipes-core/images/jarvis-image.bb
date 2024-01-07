@@ -18,7 +18,6 @@ CORE_IMAGE_EXTRA_INSTALL:append = "\
 "
 
 CORE_IMAGE_EXTRA_INSTALL:append = "\
-    dbus \
     jarvisto \
     speechee \
     rintento \
