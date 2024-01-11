@@ -15,6 +15,7 @@ CORE_IMAGE_EXTRA_INSTALL:append = "\
     packagegroup-core-boot \
     packagegroup-core-full-cmdline \
     packagegroup-jarvis \
+    ${@bb.utils.contains_any("MACHINE", "raspberrypi3 raspberrypi3-64", "packagegroup-jarvis-rpi", "", d)} \
 "
 
 CORE_IMAGE_EXTRA_INSTALL:append = "\
