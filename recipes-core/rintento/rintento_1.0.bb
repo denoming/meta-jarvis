@@ -3,10 +3,10 @@ SECTION = "examples"
 LICENSE = "MIT"
 LIC_FILES_CHKSUM ?= "file://LICENSE.md;md5=6898cb3ee19e03c282cebbcefe2b3e42"
 
-PV = "0.3-git${SRCPV}"
+PV = "1.0-git${SRCPV}"
 PR = "r0"
 
-SRCREV = "070cecabea5cb8e56c43c7079cf6eaa9845e319f"
+SRCREV = "1873bb683308902e06e75e8de443b04268ab81b2"
 
 SRC_URI = "\
     git://git@github.com/denoming/rintento.git;protocol=ssh;branch=main; \
@@ -20,6 +20,7 @@ DEPENDS += "\
     jarvisto \
     libconfig \
     libsndfile1 \
+    openssl \
     spdlog \
 "
 
