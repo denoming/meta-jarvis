@@ -24,9 +24,28 @@ CONF_VERSION = "2"
 IMAGE_FSTYPES = "tar.bz2 ext4.xz rpi-sdimg"
 SDIMG_ROOTFS_TYPE = "ext4.xz"
 
-# Extra configuration
+# Disable overscan
 DISABLE_OVERSCAN = "1"
+
+# Disable splash screen
 DISABLE_SPLASH = "1"
+
+# Disable RPI boot logo
+DISABLE_RPI_BOOT_LOGO = "1"
+
+# Set delay to wait (1 second) before loading kernel
+BOOT_DELAY = "1"
+BOOT_DELAY_MS = "0"
+
+# Enable video camera support with V4L2 drivers
+VIDEO_CAMERA = "1"
+
+# Enable Raspberry Pi Camera Module v3 support
+RASPBERRYPI_CAMERA_V3 = "1"
+
+# Enable I2C
+ENABLE_I2C = "1"
+KERNEL_MODULE_AUTOLOAD:rpi += "i2c-dev i2c-bcm2708"
 
 # Set extra free disk space
 IMAGE_ROOTFS_EXTRA_SPACE = "524288"
