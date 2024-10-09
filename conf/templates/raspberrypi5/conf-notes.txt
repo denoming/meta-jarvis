@@ -1,0 +1,5 @@
+Available images:
+ * jarvis-image
+ * jarvis-dev-image
+
+Build them by running: bitbake <image>

@@ -1,0 +1,58 @@
+# Machine Selection
+MACHINE ?= "raspberrypi5"
+MACHINE_ESSENTIAL_EXTRA_RRECOMMENDS += "kernel-modules"
+
+# Default policy config
+DISTRO ?= "jarvis"
+
+# SDK target architecture
+SDKMACHINE ?= "x86_64"
+
+# Additional image features
+USER_CLASSES ?= "buildstats"
+
+# Interactive shell configuration
+PATCHRESOLVE = "noop"
+
+# Specify license white list
+LICENSE_FLAGS_ACCEPTED = "commercial synaptics-killswitch"
+
+# Set version for tracking
+CONF_VERSION = "2"
+
+# Specify image filesystem types
+IMAGE_FSTYPES = "tar.bz2 ext4.xz rpi-sdimg"
+SDIMG_ROOTFS_TYPE = "ext4.xz"
+
+# Disable overscan
+DISABLE_OVERSCAN = "1"
+
+# Disable splash screen
+DISABLE_SPLASH = "1"
+
+# Disable RPI boot logo
+DISABLE_RPI_BOOT_LOGO = "1"
+
+# Set delay to wait (1 second) before loading kernel
+BOOT_DELAY = "1"
+BOOT_DELAY_MS = "0"
+
+# Enable video camera support with V4L2 drivers
+VIDEO_CAMERA = "1"
+
+# Enable Raspberry Pi Camera Module v3 support
+RASPBERRYPI_CAMERA_V3 = "1"
+
+# Enable I2C
+ENABLE_I2C = "1"
+KERNEL_MODULE_AUTOLOAD:rpi += "i2c-dev i2c-bcm2708"
+
+# Set extra free disk space
+IMAGE_ROOTFS_EXTRA_SPACE = "524288"
+
+# Set SDK options
+SDK_EXT_TYPE = "full"
+SDK_UPDATE_URL = "http://localhost/jarvis/esdk-update"
+
+# Specify path to archive with J.A.R.V.I.S config files
+JAR_CONFIG_FILE = "/absolute-path/config-files-archive.tar.gz"
